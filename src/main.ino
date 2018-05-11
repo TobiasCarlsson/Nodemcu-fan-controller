@@ -23,6 +23,9 @@ void loop(void) {
   if(temp < 22){
     rpm = 0;
   }
+  if(temp > 30){
+    rpm = 1023;
+  }
   analogWrite(fan, rpm);
   delay(10); //just here to slow down the output so it is easier to read
 
